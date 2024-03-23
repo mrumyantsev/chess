@@ -1,18 +1,42 @@
-# Chess Game
+# Шахматы на языке Go
 
-This is simple implementation of chess game written in Go. Make turns by entering common chess pair comands. `e2e4` for example. To exit the game type `q`, `quit` or `exit`.
+Данный репозиторий содержит реализацию игры шахматы в виде консольного приложения с текстовым интерфейсом. Игра доступна пока в режиме *"игрок против игрока"*. В дальнейшем планируется добавить режимы: *"игрок против компьютера"*, *"компьютер против компьютера"*. Игрок может делать ходы, вводя начальную и конечную координаты фигур, например: **"e2e4"**, **"g1f3"**. Если введен неправильный ход, будет выведена ошибка. Чтобы выйти из игры, введите **"q"**, **"quit"** или **"exit"**.
 
-![v0_1](https://github.com/mrumyantsev/chess-game/assets/36193247/7689ae53-aab2-4292-8520-b8394e4dbf16)
+![Шахматы](./chess-console.png "Консольный интерфейс игры")
 
-# How to use it
+## Системные требования
 
-- Clone repo:
-`git clone git@github.com:mrumyantsev/chess-game.git`
-- (Optional) Download and unpack.
-- Open Go official website:
-`https://go.dev/dl/`
-- Install the latest Go SDK for your OS.
-- Launch application:
-`go run .\cmd\app`
-- (Optional) Build and run:
-`go build -o .\build .\cmd\app`
+**Операционная система:**
+
+- Windows / MacOS / Linux.
+
+**Программное обеспечение:**
+
+- средства разработки языка Go >=v1.18;
+- утилита make.
+
+## Установка и запуск
+
+Для **сборки** приложения **локально**, выполните команду в терминале:
+
+```
+make build
+```
+
+Для **запуска** приложения **локально**, выполните:
+
+```
+make run
+```
+
+Чтобы запустить приложение в режиме **быстрого запуска** (например, во время разработки), выполните команду:
+
+```
+make fast-run
+```
+
+Или выполните ее короткую версию:
+
+```
+make
+```
