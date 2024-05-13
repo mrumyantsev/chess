@@ -1,5 +1,5 @@
 .SILENT:
-.DEFAULT_GOAL := fast-run
+.DEFAULT_GOAL := run-fast
 
 .PHONY: build
 build:
@@ -9,6 +9,6 @@ build:
 run:
 	./build/chess
 
-.PHONY: fast-run
-fast-run:
+.PHONY: run-fast
+run-fast:
 	go run ./cmd/chess
