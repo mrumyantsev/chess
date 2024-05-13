@@ -14,14 +14,14 @@ var (
 )
 
 type Chess struct {
-	Board     [SideLen][SideLen]byte
+	Board     [SideLen][SideLen]rune
 	TurnCount int
 	I1        int
 	J1        int
 	I2        int
 	J2        int
-	Piece1    byte
-	Piece2    byte
+	Piece1    rune
+	Piece2    rune
 	Records   [RecordsLen]string
 }
 
@@ -215,7 +215,7 @@ func (c *Chess) turnInfo() string {
 	return pieceName(c.Piece1) + " beats " + pieceName(c.Piece2)
 }
 
-func pieceName(piece byte) string {
+func pieceName(piece rune) string {
 	switch piece {
 	case WPawn:
 		return WhitePlayer + Space + PawnPiece

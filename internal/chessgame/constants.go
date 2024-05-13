@@ -16,23 +16,23 @@ const (
 	KingPiece          = "King"
 	PlayerColorMessage = "%s turn:\n"
 
-	WPawn   = 'p'
-	WKnight = 'k'
-	WBishop = 'b'
-	WRook   = 'r'
-	WQueen  = 'q'
-	WKing   = 'c'
-	BPawn   = 'P'
-	BKnight = 'K'
-	BBishop = 'B'
-	BRook   = 'R'
-	BQueen  = 'Q'
-	BKing   = 'C'
+	WPawn   = '♙'
+	WKnight = '♘'
+	WBishop = '♗'
+	WRook   = '♖'
+	WQueen  = '♕'
+	WKing   = '♔'
+	BPawn   = '♟'
+	BKnight = '♞'
+	BBishop = '♝'
+	BRook   = '♜'
+	BQueen  = '♛'
+	BKing   = '♚'
 	NoPiece = ' '
 )
 
-func DefaultBoardLayout() [SideLen][SideLen]byte {
-	return [SideLen][SideLen]byte{
+func DefaultBoardLayout() [SideLen][SideLen]rune {
+	return [SideLen][SideLen]rune{
 		{WRook, WKnight, WBishop, WKing, WQueen, WBishop, WKnight, WRook},
 		{WPawn, WPawn, WPawn, WPawn, WPawn, WPawn, WPawn, WPawn},
 		{NoPiece, NoPiece, NoPiece, NoPiece, NoPiece, NoPiece, NoPiece, NoPiece},

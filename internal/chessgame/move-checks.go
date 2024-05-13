@@ -1,6 +1,6 @@
 package chessgame
 
-func (c *Chess) isPiece2(a ...byte) bool {
+func (c *Chess) isPiece2(a ...rune) bool {
 	for _, val := range a {
 		if c.Board[c.J2][c.I2] == val {
 			return true
