@@ -162,7 +162,7 @@ func checkTurn(input string) error {
 }
 
 func (c *Chess) drawBoard() {
-	fmt.Println(BoardChars + "    Record Table")
+	fmt.Println(BoardChars + "     Record Table")
 
 	for j := SideLen - 1; j >= 0; j-- {
 		for i := 0; i < SideLen; i++ {
@@ -176,7 +176,7 @@ func (c *Chess) drawBoard() {
 				fmt.Print(j + 1)
 
 				if c.Records[RecordsLen-j-1] == "" {
-					fmt.Print("   ---\n")
+					fmt.Print("    ---\n")
 				} else {
 					fmt.Print("   " + c.Records[RecordsLen-j-1] + "\n")
 				}
