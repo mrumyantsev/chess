@@ -170,7 +170,7 @@ func (c *Chess) drawBoard() {
 				fmt.Print(j + 1)
 			}
 
-			fmt.Print(string(c.Board[j][i]))
+			c.drawSquare(j, i)
 
 			if i == SideLen-1 {
 				fmt.Print(j + 1)
@@ -188,6 +188,20 @@ func (c *Chess) drawBoard() {
 
 	fmt.Println(BoardChars)
 	fmt.Println()
+}
+
+func (c *Chess) drawSquare(j, i int) {
+	currentPiece := c.Board[j][i]
+
+	if currentPiece == NoPiece {
+		if ((j%2 == 0) && (i%2 != 0)) || ((j%2 != 0) && (i%2 == 0)) {
+			currentPiece = '▒'
+		} else {
+			currentPiece = '█'
+		}
+	}
+
+	fmt.Printf("%c", currentPiece)
 }
 
 func (c *Chess) printTurnMessage() {
